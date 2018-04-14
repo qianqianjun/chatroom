@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="学生网络中心技术部开发组">
+        <meta name="description" content="学生网络中心技术部开发组纳新宣讲技术展示">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>学生网络中心</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="shortcut icon" href="snc.ico" type="image/x-icon">
+        <link rel="icon" href="snc.ico" type="image/x-icon">
+        <link href="public/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+        <link href="public/css/animate.min.css" rel="stylesheet">
+        <link href="public/css/style.min.css?v=4.1.0" rel="stylesheet">
+        <link href="public/layer/skin/default/layer.css" rel="stylesheet">
+    </head>
+    <body style="height: 100%;width: 100%;">
+        <div class="wrapper">
+            <div class="banner">
+                <img src="content/snclogo.jpg" style="width: 100%;height: 90%;border-radius: 10px;">
+                <div style="width: 100%;height: 5px;background-color: #42b1b5"></div>
+                <span id="status" style="border-radius: 3px 10px 6px;background: #8AC007;padding:5px; width:130px;height: 150px;"></span>
+            </div>
+            <div id="historyMsg">
+                <!-- 编辑每一个消息盒子的样式： -->
+                <!-- <div class="messagebox">
+                    <div class="userinfo">姓名</div><br>
+                    <div class="messagecontent">消息</div><br>
+                    <img src="content/snclogo.jpg" class="imagedata">
+                </div> -->
+            </div>
+            <div class="usercontrols" >
+                <div class="items" style="width: 100%;">
+                    <input id="colorStyle" type="hidden" placeHolder='#000' title="font color"/>
+                    <input id="emoji" type="button" value="emoji" title="emoji" class="cssbutton"/>
+                    <label for="sendImage" class="imageLable">
+                        <input type="button" value="image" class="cssbutton"/>
+                        <input id="sendImage" type="file"  value="image" class="cssbutton"/>
+                    </label>
+                    <input id="clearBtn" type="button" value="clear" title="clear screen" class="cssbutton"/>
+                </div>
+                <textarea id="messageInput" placeHolder="回车发送" ></textarea>
+                <input id="sendBtn" type="button" value="发送">
+                <div id="emojiWrapper">
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面是登录时候的弹窗 -->
+
+        <div id="loginWrapper">
+            <p id="info" style="font-size: 2em;color: #d05656; text-align:center;">加载中，学弟学妹稍等</p>
+            <div class="loginbox" style="background-color:#a2ccf2;" id="nickWrapper">
+                <form >
+                    <div style="width: 100%;height: 40px;font-size:30px;padding-top: 3px;padding-bottom: 4px;background-color: #fff;color: #a2ccf2;">欢迎来到学生网络中心聊天室</div>
+                    <div class="col-sm-8" style="color:#d05656;text-align: left;padding-top: 20px;padding-bottom: 20px;padding-left: 30px;padding-right: 30px;width:80%;margin-left: 10%;">
+                        <span style="font-size: 22px;color: #4CAF50;">昵称</span><br>
+                        <input type="text"  placeholder="给自己起个名字" style="width: 80%;margin-top: 10px;border-radius: 8px;border: 2px solid #8AC007;padding: 3px;height:40px;font-size: 22px;" id="nicknameInput"><br>
+                        <button  type="button" value="OK" id="loginBtn" style="background-color: #4CAF50; border: none; color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;margin-top: 10px;float: right;margin-right: 20%; border-radius: 8px;">进入</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- 弹窗结束 -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="scripts/hichat.js"></script>
+        <script>
+    </script>
+    </body>
+</html>
